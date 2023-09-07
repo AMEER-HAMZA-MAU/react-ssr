@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
       - name: Installing Node.js
         uses: actions/setup-node@v1
         with:
@@ -28,4 +28,4 @@ jobs:
           aws-region: us-east-2
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync . s3://react-server-deploy --delete
+        run: aws s3 sync ./dist s3://react-server-deploy --delete
