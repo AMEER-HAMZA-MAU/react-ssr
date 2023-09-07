@@ -28,4 +28,4 @@ jobs:
           aws-region: us-east-2
 
   Deploy: Deploy to ec2
-    
+    runs-on: [aws-ec2]
