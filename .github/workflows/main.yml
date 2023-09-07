@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: '10.x'
       - name: Installing dependencies
-        run: npm i
+        run: npm install 
       - name: Building project
-        run: npm run dev
+        run: npm run build
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
