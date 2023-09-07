@@ -8,7 +8,7 @@ on:
 jobs:
   # To build the project
   build-react-server:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checking out code
         uses: actions/checkout@v3
@@ -28,9 +28,4 @@ jobs:
           aws-region: us-east-2
 
   Deploy: Deploy to ec2
-      runs-on: [aws-ec2]
-      steps: 
-        - name: run nmp i for installing package dependencies
-          run: npm i
-        - name: run react app
-          run: npm run dev
+    
